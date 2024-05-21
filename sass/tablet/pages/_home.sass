@@ -1,0 +1,54 @@
+@use "../../variables"
+.hero
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home.jpg")
+  width: 100vw
+  height: 100vh
+  object-fit: cover
+  object-position: center
+  background-repeat: no-repeat
+  &__portada
+    display: flex
+    flex-direction: column
+    justify-content: center
+    align-items: center
+    height: 100vh
+  &__title
+    font-size: variables.$size-xxl
+    color: variables.$color-white
+    font-weight: bolder
+  &__subtitle
+    font-size: variables.$size-s
+    font-weight: lighter
+    color: variables.$color-white
+.main__post
+  & >.container
+    display: flex
+    flex-direction: column
+    align-items: center
+.post__title
+  font-weight: bolder
+  font-size: variables.$size-l
+.post__text
+  font-weight: lighter
+  font-size: variables.$size-m
+.post__time
+  font-style: italic
+  font-weight: initial
+  font-size: variables.$size-s
+.more__post
+  margin-left: auto
+  margin-top: variables.$size-xxl
+.button__link
+  background-color: variables.$color-blue
+  color: variables.$color-white
+  font-weight: bolder
+  padding-inline: variables.$size-l
+  text-transform: uppercase
+  &:hover
+    background-color: variables.$color-white
+    border: 1px solid variables.$color-blue
+    color: variables.$color-blue
+
+
+
+

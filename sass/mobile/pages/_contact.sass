@@ -1,0 +1,31 @@
+@use "../../variables"
+.hero__contact
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/home.jpg")
+  width: 100vw
+  height: 80vh
+  object-fit: cover
+  object-position: center
+  background-repeat: no-repeat
+  .hero__portada-contact
+    height: 80vh
+.text-contact
+  text-align: center
+.form
+  display: flex
+  flex-direction: column
+  gap: variables.$size-xl
+.input__contact-form
+  width: 100%
+  border: initial
+  padding-block: variables.$size-s
+.button-box
+  margin-top: variables.$size-xl
+  margin-left: auto
+.button__submit
+  background-color: variables.$color-blue
+  color: variables.$color-white
+  font-weight: bolder
+  padding-inline: variables.$size-l
+  padding-block: variables.$size-s
+  border: initial
+  text-transform: uppercase

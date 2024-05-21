@@ -1,0 +1,84 @@
+<!doctype html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport"
+              content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <!--tipografia-->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Montserrat+Alternates:ital,wght@0,300;0,400;1,600&display=swap" rel="stylesheet">
+        <!--Fin tipografia-->
+        <!-- Ficheros CSS -->
+        <link href="../css/_base.css" rel="stylesheet">
+        <link href="../css/mobile.css" rel="stylesheet" media="all and (max-width: 600px)">
+        <link rel="stylesheet" href="../css/tablet.css" media="all and (min-width: 600px) and (max-width: 1024px)">
+        <link href="../css/desktop.css" rel="stylesheet" media="all and (min-width: 1024px)">
+        <!-- Fin ficheros CSS -->
+        <!--normalizador-->
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css">
+        <!--Alpine-->
+        <script src="https://unpkg.com/alpinejs" defer></script>
+        <title>About Me</title>
+    </head>
+    <body  x-data="{ isUpScroll: true, lastPosScroll: 0, isTopScroll: true }">
+        <header class="header"
+                x-data="{show: false}"
+                @scroll.window="(window.pageYOffset === 0 ? isTopScroll = true : isTopScroll = false, window.pageYOffset > lastPosScroll ? (isUpScroll = false, lastPosScroll =  window.pageYOffset) : (isUpScroll = true, lastPosScroll =  window.pageYOffset))"
+                :class="isUpScroll ? isTopScroll ? 'header--transparent header--show' : 'header--show' : ''"
+        >
+            <div class="container">
+                <h1 class="logo"><a href="" class="link">Clean blog</a></h1>
+                <button class="button header__nav__open has-mobile" @click="show = !show">
+                    <img src="../img/menu.svg" alt="icono menú hamburguesa" class="img hamburger__icon">
+                </button>
+                <nav class="nav header__nav" :class="show ? 'nav--show' : ''">
+                    <button class="button  button__header__nav__close has-mobile" @click="show = false"><img src="../img/close.svg" alt="icono cerrar menu" class="img close__icon"></button>
+                    <ul class="ul__list header__nav__list" @click="show = !show">
+                        <li><a href="../index.html" class="link ul__link">Home</a></li>
+                        <li><a href="../about/about.html" class="link ul__link">About</a></li>
+                        <li><a href="../posts/post.html" class="link ul__link">Post</a></li>
+                        <li><a href="../contact/contact.html" class="link ul__link">contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+        <main>
+            <section class="hero hero__about">
+               <div class="container">
+                   <hgroup class="hero__portada hero__portada-about">
+                       <h2 class="hero__title">About Me</h2>
+                       <p class="hero__subtitle">This is what I do</p>
+                   </hgroup>
+               </div>
+            </section>
+            <section class="aboutme__text">
+                <div class="container">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At eum inventore officiis tenetur? Ex
+                        illo incidunt laboriosam laudantium libero necessitatibus provident quod recusandae, veritatis?
+                        Aliquam aliquid dolorem fugit laborum quas!</p>
+                    <p>Autem culpa ducimus eveniet facere facilis magni minus neque pariatur quod tempore. Deserunt
+                        error eum neque repudiandae sequi. Alias dolore doloremque enim expedita fugiat hic, iure
+                        mollitia rem tenetur veritatis.</p>
+                    <p>A cumque dolore in maiores modi odio provident quae tempore velit. Assumenda atque, consectetur,
+                        consequatur culpa cum dolores facilis hic magnam obcaecati officiis temporibus ullam veniam. Et
+                        exercitationem iste quibusdam?</p>
+                </div>
+            </section>
+        </main>
+        <footer class="footer">
+            <div class="container">
+                <section class="social__media">
+                    <a href="mailto:lbenitezgonzalez@outlook.es" class="link link__rrss"><img src="../img/email.png" alt="icono correo electrónico" class="img img__rrss"></a>
+                    <a href="tel:622417231" class="link link__rrss"><img src="../img/telefono.png" alt="icono teléfono" class="img img__rrss"></a>
+                    <a href="https://github.com/" class="link link__rrss"><img src="../img/github.png" alt="Icono github" class="img img__rrss"></a>
+                    <a href="https://www.linkedin.com/in/laura-ben%C3%ADtez-gonz%C3%A1lez-6672b3236/" class="link link__rrss"><img src="../img/social.png" alt="Icono linkedin" class="img img__rrss"></a>
+                </section>
+                <section class="copyright">
+                    Copyright © Start Bootstrap 2021
+                </section>
+            </div>
+        </footer>
+    </body>
+</html>

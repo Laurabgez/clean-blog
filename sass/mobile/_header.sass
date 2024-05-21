@@ -1,0 +1,58 @@
+@use "../variables"
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  transition: .5s
+  background-color: variables.$color-blue
+  transform: translateY(-100%)
+  z-index: 9999
+  & > .container
+    display: flex
+    flex-direction: column
+    align-items: center
+  &__nav
+    transition: 1s
+    position: fixed
+    backdrop-filter: blur(10px)
+    z-index: 999
+    top: -100vh
+  &__nav__open
+    width: 100%
+    height: 100%
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: initial
+    border: none
+  .hamburger__icon
+    width: variables.$size-xl
+    height: variables.$size-xl
+  .nav--show
+    transform: translateY(100vh)
+    backdrop-filter: blur(10px)
+    position: absolute
+    z-index: 9999
+    left: 0
+    right: 0
+  .button__header__nav__close
+    display: flex
+    justify-content: center
+    align-items: center
+    background-color: variables.$color-blue
+    width: 100%
+    border: none
+    height: 5rem
+    .close__icon
+      width: variables.$size-xl
+      height: variables.$size-xl
+.header--show
+  transform: translateY(0)
+.logo
+  font-size: variables.$size-s
+  color: variables.$color-white
+.ul__link
+  text-transform: uppercase
+  font-size: variables.$size-s

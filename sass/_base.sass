@@ -1,0 +1,36 @@
+@use "variables"
+
+html
+  scroll-behavior: smooth
+body
+  background-color: variables.$color-white
+  font-family: variables.$font-text
+.container
+  margin-inline: auto
+  max-width: 1100px
+  padding: 1rem
+.img
+  display: block
+  width: 100%
+  object-fit: cover
+  object-position: center
+.ul__list
+  display: flex
+  flex-wrap: wrap
+  list-style: none
+  padding: 0
+  margin: 0
+.link
+  display: inline-block
+  color: inherit
+  text-decoration: none
+  padding: 1rem
+.has-mobile
+  display: none
+  @media (width < 600px)
+    display: initial
+.has-desktop
+  display: initial
+  @media (width < 600px)
+
+

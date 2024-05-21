@@ -1,0 +1,28 @@
+@use "../variables"
+
+.header
+  position: fixed
+  top: 0
+  left: 0
+  right: 0
+  transition: .5s
+  background-color: variables.$color-blue
+  transform: translateY(-100%)
+  z-index: 9999
+  & > .container
+    display: flex
+    justify-content: space-between
+    align-items: center
+.logo
+  font-size: variables.$size-l
+  color: variables.$color-white
+.ul__link
+  text-transform: uppercase
+  color: variables.$color-white
+  &:hover
+    text-decoration: underline
+    text-decoration-color: variables.$color-white
+.header--transparent
+  backdrop-filter: none
+.header--show
+  transform: translateY(0)
